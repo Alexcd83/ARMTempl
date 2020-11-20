@@ -28,10 +28,10 @@
             "location": "eastus",
             "kind": "V1",
             "properties": {
-                "displayName": "semioys@msteamsappaccess.onmicrosoft.com",
+                "displayName": "alekseyoholenko.onmicrosoft.com",
                 "customParameterValues": {},
                 "api": {
-                    "id": "[concat('/subscriptions/3e385f7a-04ba-4919-bbb2-1237cf828924/providers/Microsoft.Web/locations/eastus/managedApis/', parameters('connections_office365_name'))]"
+                    "id": "[concat('/subscriptions/d94b0629-8c8b-4f9b-8c4a-acb638e36ad4/providers/Microsoft.Web/locations/eastus/managedApis/', parameters('connections_office365_name'))]"
                 }
             }
         },
@@ -247,7 +247,7 @@
                             "powerbi": {
                                 "connectionId": "[resourceId('Microsoft.Web/connections', parameters('connections_powerbi_name'))]",
                                 "connectionName": "powerbi",
-                                "id": "/subscriptions/3e385f7a-04ba-4919-bbb2-1237cf828924/providers/Microsoft.Web/locations/eastus/managedApis/powerbi"
+                                "id": "/subscriptions/d94b0629-8c8b-4f9b-8c4a-acb638e36ad4/providers/Microsoft.Web/locations/eastus/managedApis/powerbi"
                             }
                         }
                     }
