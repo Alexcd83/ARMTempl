@@ -19,7 +19,7 @@ stages:
                 azureResourceManagerConnection: 'Azure subscription 1(d94b0629-8c8b-4f9b-8c4a-acb638e36ad4)'
                 subscriptionId: 'd94b0629-8c8b-4f9b-8c4a-acb638e36ad4'
                 action: 'Create Or Update Resource Group'
-                resourceGroupName: 'newTest20112020'
+                resourceGroupName: 'Alexcd83RG'
                 location: 'West US 2'
                 templateLocation: 'URL of the file'
                 csmFileLink: 'https://raw.githubusercontent.com/Alexcd83/ARMTempl/main/template.json'
