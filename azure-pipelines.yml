@@ -23,7 +23,6 @@ stages:
                 location: 'West US 2'
                 templateLocation: 'URL of the file'
                 csmFileLink: 'https://raw.githubusercontent.com/Alexcd83/ARMTempl/main/template.json'
-                csmParametersFileLink: 'https://raw.githubusercontent.com/Alexcd83/ARMTempl/main/parameters.json'
                 deploymentMode: 'Complete'
                 deploymentName: 'LogicAppARMGIT'
                 addSpnToEnvironment: true
