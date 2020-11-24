@@ -17,7 +17,7 @@ stages:
               inputs:
                 deploymentScope: 'Resource Group'
                 azureResourceManagerConnection: 'Azure subscription 1(d94b0629-8c8b-4f9b-8c4a-acb638e36ad4)'
-                subscriptionId: 'd94b0629-8c8b-4f9b-8c4a-acb638e36ad4'
+                subscriptionId: ${env:SUBID}
                 action: 'Create Or Update Resource Group'
                 resourceGroupName: 'Alexcd83RG2020'
                 location: 'West US 2'
