@@ -20,6 +20,7 @@ stages:
 
             - task: AzureResourceManagerTemplateDeployment@3
               inputs:
+              $var = Read-Host 'Введите логин для Office 365 коннектора' 
                 deploymentScope: 'Resource Group'
                 azureResourceManagerConnection: 'Azure subscription 1(d94b0629-8c8b-4f9b-8c4a-acb638e36ad4)'
                 subscriptionId: ${env:SUBID}
@@ -31,13 +32,4 @@ stages:
                 deploymentMode: 'Complete'
                 deploymentName: 'LogicAppARMGIT'
                 addSpnToEnvironment: true
- steps:
-  - script: echo test
-    name: ScriptName
 
-  - task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      Write-Host '##vso[task.setvariable variable=xxx;isOutput=true;]xxx'
-  name: PSName
