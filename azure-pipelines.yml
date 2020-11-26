@@ -5,7 +5,19 @@
 
 trigger:
 - main
-
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your PowerShell commands here.
+      
+      Write-Host "Hello World"
+      $var = Read-Host 'Введите логин для Office 365 коннектора' 
+      $var = Read-Host 'Введите пароль' -AsSecureString
+    failOnStderr: true
+    showWarnings: true
+    pwsh: true
+    
 stages:
   - stage: test
     jobs:
