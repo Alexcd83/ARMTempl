@@ -31,10 +31,13 @@ stages:
                 deploymentMode: 'Complete'
                 deploymentName: 'LogicAppARMGIT'
                 addSpnToEnvironment: true
-                - task: PowerShell@2
-                  inputs:
-                    targetType: 'inline'
-                    script: |
-                      # Write your PowerShell commands here.
-                      
-                      Write-Host "Hello World"
+ steps:
+  - script: echo test
+    name: ScriptName
+
+  - task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      Write-Host '##vso[task.setvariable variable=xxx;isOutput=true;]xxx'
+  name: PSName
