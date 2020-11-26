@@ -20,7 +20,7 @@ stages:
 
             - task: AzureResourceManagerTemplateDeployment@3
               inputs:
-              $var = Read-Host 'Введите логин для Office 365 коннектора' 
+              $var = Read-Host 'Введите логин для Office 365 коннектора'
                 deploymentScope: 'Resource Group'
                 azureResourceManagerConnection: 'Azure subscription 1(d94b0629-8c8b-4f9b-8c4a-acb638e36ad4)'
                 subscriptionId: ${env:SUBID}
