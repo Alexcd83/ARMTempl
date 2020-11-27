@@ -6,6 +6,9 @@
 trigger:
 - main
 
+variables:
+  name: colin
+  
 pool:
   vmImage: 'ubuntu-latest'
 
