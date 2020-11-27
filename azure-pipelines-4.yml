@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: $name3:UserName
+- script: $name3 = Read-Host 'ВВедите ваше имя:'
 - script: echo "Hello, $(name3)!"
   displayName: 'Run a one-line script'
 
