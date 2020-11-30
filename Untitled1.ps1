@@ -1,1 +1,1 @@
-New-AzResourceGroup -Name newTestRG02 -Location "Central US"
+New-AzResourceGroup -Name TestRG2001 -Location "Central US"
