@@ -1,3 +1,1 @@
-$name3 = Read-Host "ВВедите ваше имя"
-
-Write-Host $name3
+New-AzResourceGroup -Name newTestRG02 -Location "Central US"
