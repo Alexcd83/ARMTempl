@@ -25,13 +25,13 @@
             "type": "Microsoft.Web/connections",
             "apiVersion": "2016-06-01",
             "name": "[parameters('connections_office365_name')]",
-            "location": "eastus",
+            "location": "$location",
             "kind": "V1",
             "properties": {
                 "displayName": "alekseyoholenko.onmicrosoft.com",
                 "customParameterValues": {},
                 "api": {
-                    "id": "[concat('/subscriptions/d94b0629-8c8b-4f9b-8c4a-acb638e36ad4/providers/Microsoft.Web/locations/eastus/managedApis/', parameters('connections_office365_name'))]"
+                    "id": "[concat('/subscriptions/$subscr/providers/Microsoft.Web/locations/$location/managedApis/', parameters('connections_office365_name'))]"
                 }
             }
         },
@@ -39,13 +39,13 @@
             "type": "Microsoft.Web/connections",
             "apiVersion": "2016-06-01",
             "name": "[parameters('connections_powerbi_name')]",
-            "location": "eastus",
+            "location": "$location",
             "kind": "V1",
             "properties": {
                 "displayName": "semioys@msteamsappaccess.onmicrosoft.com",
                 "customParameterValues": {},
                 "api": {
-                    "id": "[concat('/subscriptions/d94b0629-8c8b-4f9b-8c4a-acb638e36ad4/providers/Microsoft.Web/locations/eastus/managedApis/', parameters('connections_powerbi_name'))]"
+                    "id": "[concat('/subscriptions/$subscr/providers/Microsoft.Web/locations/$location/managedApis/', parameters('connections_powerbi_name'))]"
                 }
             }
         },
@@ -53,13 +53,13 @@
             "type": "Microsoft.Web/connections",
             "apiVersion": "2016-06-01",
             "name": "[parameters('connections_sharepointonline_name')]",
-            "location": "eastus",
+            "location": "$location",
             "kind": "V1",
             "properties": {
                 "displayName": "semioys@msteamsappaccess.onmicrosoft.com",
                 "customParameterValues": {},
                 "api": {
-                    "id": "[concat('/subscriptions/d94b0629-8c8b-4f9b-8c4a-acb638e36ad4/providers/Microsoft.Web/locations/eastus/managedApis/', parameters('connections_sharepointonline_name'))]"
+                    "id": "[concat('/subscriptions/$subscr/providers/Microsoft.Web/locations/$location/managedApis/', parameters('connections_sharepointonline_name'))]"
                 }
             }
         },
@@ -67,7 +67,7 @@
             "type": "Microsoft.Logic/workflows",
             "apiVersion": "2017-07-01",
             "name": "[parameters('workflows_MailingLA_name')]",
-            "location": "eastus",
+            "location": "$location",
             "dependsOn": [
                 "[resourceId('Microsoft.Web/connections', parameters('connections_office365_name'))]",
                 "[resourceId('Microsoft.Web/connections', parameters('connections_powerbi_name'))]"
@@ -242,12 +242,12 @@
                             "office365": {
                                 "connectionId": "[resourceId('Microsoft.Web/connections', parameters('connections_office365_name'))]",
                                 "connectionName": "office365",
-                                "id": "/subscriptions/d94b0629-8c8b-4f9b-8c4a-acb638e36ad4/providers/Microsoft.Web/locations/eastus/managedApis/office365"
+                                "id": "/subscriptions/$subscr/providers/Microsoft.Web/locations/$location/managedApis/office365"
                             },
                             "powerbi": {
                                 "connectionId": "[resourceId('Microsoft.Web/connections', parameters('connections_powerbi_name'))]",
                                 "connectionName": "powerbi",
-                                "id": "/subscriptions/d94b0629-8c8b-4f9b-8c4a-acb638e36ad4/providers/Microsoft.Web/locations/eastus/managedApis/powerbi"
+                                "id": "/subscriptions/$subscr/providers/Microsoft.Web/locations/$location/managedApis/powerbi"
                             }
                         }
                     }
